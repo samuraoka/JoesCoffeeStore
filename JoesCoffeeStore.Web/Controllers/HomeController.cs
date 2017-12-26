@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using JoesCoffeeStore.Web.Models;
 using Microsoft.AspNetCore.Mvc;
-using JoesCoffeeStore.Web.Models;
+using System.Diagnostics;
 
 namespace JoesCoffeeStore.Web.Controllers
 {
@@ -15,17 +11,13 @@ namespace JoesCoffeeStore.Web.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult CoffeeDetails()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult AllCoffees()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
