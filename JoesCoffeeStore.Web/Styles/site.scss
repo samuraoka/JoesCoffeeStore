@@ -23,6 +23,41 @@ header {
     height: 80px;
 }
 
+nav {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    padding-left: 5px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: block;
+        }
+    }
+}
+
+.navlink {
+    height: 35px;
+    margin-right: 10px;
+    font-size: 18px;
+    float: left;
+    padding-top: 12px;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #704823;
+    }
+}
+
+.backgroundgradient {
+    background-color: #603813;
+}
+
 .searchbox {
     float: right;
     padding: 5px;

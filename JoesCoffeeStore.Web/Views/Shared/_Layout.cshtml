@@ -14,6 +14,18 @@
             <span id="headername">Joe's Coffee Store</span>
             <input type="search" class="searchbox" placeholder="Search our store" />
         </div>
+
+        <nav class="backgroundgradient">
+            <ul>
+                <li><a class="navlink" asp-action="Index">Home</a></li>
+                <li><a class="navlink" asp-action="Blog">Blog</a></li>
+                <li><a class="navlink" asp-action="AllCoffees">Our coffees</a></li>
+                <li><a class="navlink" asp-action="Accessories">Accessories</a></li>
+                <li><a class="navlink" asp-action="Gifts">Gifts</a></li>
+                <li><a class="navlink" asp-action="FindUs">Find us</a></li>
+                <li><a class="navlink" asp-action="Checkout">Checkout</a></li>
+            </ul>
+        </nav>
     </header>
 
     @RenderBody()
