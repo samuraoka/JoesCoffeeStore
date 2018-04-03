@@ -32,4 +32,26 @@ gulp.task('min:css', ['site.css'], function () {
         .pipe(gulp.dest('.'));
 });
 
-gulp.task("series", ['site.css', 'min:css'], function () { });
+gulp.task('copy-css-js-libs', function () {
+    // jquery
+    gulp.src([
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/jquery/dist/jquery.min.map',
+    ]).pipe(gulp.dest('wwwroot/js/jquery'));
+
+    // jquery-validation
+    gulp.src([
+        'node_modules/jquery-validation/dist/additional-methods.js',
+        'node_modules/jquery-validation/dist/jquery.validate.js',
+        'node_modules/jquery-validation/dist/jquery.validate.min.js',
+    ]).pipe(gulp.dest('wwwroot/js/jquery-validation'));
+
+    // jquery-validation-unobtrusive
+    gulp.src([
+        'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js',
+        'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js',
+    ]).pipe(gulp.dest('wwwroot/js/jquery-validation-unobtrusive'));
+});
+
+gulp.task("series", ['site.css', 'min:css', 'copy-css-js-libs'], function () { });

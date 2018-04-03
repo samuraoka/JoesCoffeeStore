@@ -263,3 +263,6 @@ __pycache__/
 # These files are generated from site.scss file.
 site.css
 site.min.css
+/JoesCoffeeStore.Web/wwwroot/js/jquery
+/JoesCoffeeStore.Web/wwwroot/js/jquery-validation
+/JoesCoffeeStore.Web/wwwroot/js/jquery-validation-unobtrusive
