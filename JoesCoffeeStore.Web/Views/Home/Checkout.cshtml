@@ -5,53 +5,87 @@
         <span>Checkout</span>
     </header>
 
+    <div asp-validation-summary="All">
+    </div>
+
     <form id="mainForm" method="post">
         <fieldset class="box">
             <legend>Your details</legend>
             <div>
                 <p>
                     <label class="textLabel" asp-for="FirstName"></label>
-                    <input id="firstNameInput" asp-for="FirstName" type="text" autofocus class="textinput" />
+                    <input id="firstNameInput" asp-for="FirstName" type="text"
+                           autofocus class="textinput" maxlength="30" required
+                           placeholder="Enter your first name" />
+                    <span asp-validation-for="FirstName"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="LastName"></label>
-                    <input id="lastNameInput" asp-for="LastName" type="text" class="textinput" size="10" />
+                    <input id="lastNameInput" asp-for="LastName" type="text"
+                           class="textinput" size="10" maxlength="50" required
+                           placeholder="Enter your last name" />
+                    <span asp-validation-for="LastName"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="Email"></label>
-                    <input id="emailInput" asp-for="Email" type="email" class="textinput" />
+                    <input id="emailInput" asp-for="Email" type="email"
+                           class="textinput" required
+                           placeholder="Please enter your email address" />
+                    <span asp-validation-for="Email"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="Street"></label>
-                    <input id="streetInput" asp-for="Street" type="text" class="textinput" />
+                    <input id="streetInput" asp-for="Street" type="text"
+                           class="textinput" required
+                           placeholder="Please enter your shipping street" />
+                    <span asp-validation-for="Street"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="Number"></label>
-                    <input id="numberInput" asp-for="Number" type="text" class="textinput" />
+                    <input id="numberInput" asp-for="Number" type="text"
+                           class="textinput" required
+                           placeholder="Please enter your street number" />
+                    <span asp-validation-for="Number"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="ZipCode"></label>
-                    <input id="zipInput" asp-for="ZipCode" type="text" class="textinput" />
+                    <input id="zipInput" asp-for="ZipCode" type="text"
+                           class="textinput" required
+                           placeholder="Please enter your zip code" />
+                    <span asp-validation-for="ZipCode"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="City"></label>
-                    <input id="cityInput" asp-for="City" type="text" class="textinput" />
+                    <input id="cityInput" asp-for="City" type="text"
+                           class="textinput" required
+                           placeholder="Please enter your city" />
+                    <span asp-validation-for="City"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="Country"></label>
-                    <input id="countryInput" asp-for="Country" type="text" />
+                    <input id="countryInput" asp-for="Country" type="text"
+                           pattern="[A-Za-z]{3}" required
+                           placeholder="Please enter your country (3 letter code)" />
+                    <span asp-validation-for="Country"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="PhoneNumber"></label>
-                    <input id="phoneInput" asp-for="PhoneNumber" type="text" class="textinput" />
+                    <input id="phoneInput" asp-for="PhoneNumber" type="text"
+                           class="textinput" required
+                           placeholder="Please enter your phone number" />
+                    <span asp-validation-for="PhoneNumber"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="Blog"></label>
-                    <input id="blogInput" asp-for="Blog" type="url" class="textinput" />
+                    <input id="blogInput" asp-for="Blog" type="url"
+                           class="textinput" placeholder="Please enter your blog address if you have one" />
+                    <span asp-validation-for="Blog"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="Remark"></label>
-                    <input id="remarkInput" asp-for="Remark" type="text" class="textinput" />
+                    <input id="remarkInput" asp-for="Remark" type="text"
+                           class="textinput" placeholder="Please enter any extra remarks you have here." />
+                    <span asp-validation-for="Remark"></span>
                 </p>
             </div>
         </fieldset>
@@ -62,15 +96,22 @@
             <div>
                 <p>
                     <label class="textLabel" asp-for="BirthDate"></label>
-                    <input id="deliveryDateInput" asp-for="BirthDate" type="date" class="textinput" />
+                    <input id="deliveryDateInput" asp-for="BirthDate" type="date"
+                           class="textinput" placeholder="Enter a date" />
+                    <span asp-validation-for="BirthDate"></span>
                 </p>
                 <p>
                     <label class="textLabel" asp-for="Color"></label>
-                    <input id="colorInput" asp-for="Color" type="color" class="textinput" />
+                    <input id="colorInput" asp-for="Color" type="color"
+                           class="textinput" placeholder="Select a color" />
+                    <span asp-validation-for="Color"></span>
                 </p>
                 <p>
                     <label class="textinput" asp-for="Bow"></label>
-                    <input id="bowInput" asp-for="Bow" type="number" class="textinput" />
+                    <input id="bowInput" asp-for="Bow" type="number"
+                           class="textinput" min="1" max="10"
+                           placeholder="Enter a value between 1 and 10" />
+                    <span asp-validation-for="Bow"></span>
                 </p>
             </div>
         </fieldset>
