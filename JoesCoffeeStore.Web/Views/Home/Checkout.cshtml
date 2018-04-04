@@ -1,0 +1,81 @@
+﻿@model JoesCoffeeStore.Web.Models.CheckoutViewModel
+
+<section class="coffeedetails">
+    <header class="blockheader">
+        <span>Checkout</span>
+    </header>
+
+    <form id="mainForm" method="post">
+        <fieldset class="box">
+            <legend>Your details</legend>
+            <div>
+                <p>
+                    <label class="textLabel" asp-for="FirstName"></label>
+                    <input id="firstNameInput" asp-for="FirstName" type="text" autofocus class="textinput" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="LastName"></label>
+                    <input id="lastNameInput" asp-for="LastName" type="text" class="textinput" size="10" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="Email"></label>
+                    <input id="emailInput" asp-for="Email" type="email" class="textinput" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="Street"></label>
+                    <input id="streetInput" asp-for="Street" type="text" class="textinput" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="Number"></label>
+                    <input id="numberInput" asp-for="Number" type="text" class="textinput" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="ZipCode"></label>
+                    <input id="zipInput" asp-for="ZipCode" type="text" class="textinput" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="City"></label>
+                    <input id="cityInput" asp-for="City" type="text" class="textinput" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="Country"></label>
+                    <input id="countryInput" asp-for="Country" type="text" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="PhoneNumber"></label>
+                    <input id="phoneInput" asp-for="PhoneNumber" type="text" class="textinput" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="Blog"></label>
+                    <input id="blogInput" asp-for="Blog" type="url" class="textinput" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="Remark"></label>
+                    <input id="remarkInput" asp-for="Remark" type="text" class="textinput" />
+                </p>
+            </div>
+        </fieldset>
+
+        <br />
+        <fieldset class="box">
+            <legend>Your order</legend>
+            <div>
+                <p>
+                    <label class="textLabel" asp-for="BirthDate"></label>
+                    <input id="deliveryDateInput" asp-for="BirthDate" type="date" class="textinput" />
+                </p>
+                <p>
+                    <label class="textLabel" asp-for="Color"></label>
+                    <input id="colorInput" asp-for="Color" type="color" class="textinput" />
+                </p>
+                <p>
+                    <label class="textinput" asp-for="Bow"></label>
+                    <input id="bowInput" asp-for="Bow" type="number" class="textinput" />
+                </p>
+            </div>
+        </fieldset>
+
+        <input type="submit" class="submitbutton" value="Place order" />
+
+    </form>
+</section>
